@@ -19,8 +19,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-
-
     <style>
         /* Estilo para o navbar */
         .navbar {
@@ -33,8 +31,6 @@
             margin-right: 5px;
             /* Adiciona espaço entre as li */
         }
-
-
 
         .navbar-nav .nav-item .nav-link {
             color: #DC143C;
@@ -57,9 +53,52 @@
             color: #fff;
             /* Branco */
         }
+
+        .card-body {
+            position: relative;
+            overflow: hidden;
+            /* Impede que o texto ultrapasse a imagem */
+        }
+
+        .card-body:hover .img-link {
+            filter: brightness(70%);
+            transform: scale(1.1);
+            /* Ajuste o valor conforme necessário */
+            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .card-body:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .card-body .text-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            max-width: 80vw;
+            /* Limita a largura do texto */
+            padding: 10px;
+            box-sizing: border-box;
+            /* Garante que o padding não aumente a largura total */
+        }
+
+        .card-body .text-container h5,
+        .card-body .text-container p {
+            margin: 0;
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
+
+
+
+        .card-body:hover .text-container h5,
+        .card-body:hover .text-container p {
+            color: #000;
+            transition: color 0.3s ease-in-out;
+        }
     </style>
-
-
 </head>
 
 <body class="antialiased">
@@ -164,116 +203,36 @@
 
     <div class="container my-5">
         <div class="row">
-
-
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
+                <div class="card mb-5 shadow-sm text-center border-white position-relative">
+                    <div class="card-body">
+                        <a href="/events/" class="position-relative d-inline-block img-link">
+                            <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
+                            <div class="overlay"></div>
+                            <div class="position-absolute bottom-0 start-0 p-3 text-container">
+                                <h5 class="mb-0 text-white bg-danger d-inline-block">Vem Mais Temporadas?</h5>
+                                <p class="mb-0 text-black bg-white d-inline-block">Filho do gaustão relata e expõe como ficou sua saude depois de varias cirurgias </p>
+                            </div>
+                        </a>
                     </div>
-
-                    <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
                 </div>
             </div>
+            <!-- ... (outros cards) ... -->
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
+                <div class="card mb-5 shadow-sm text-center border-white position-relative">
                     <div class="card-body">
-                    <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
+                        <a href="/events/" class="position-relative d-inline-block img-link">
+                            <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
+                            <div class="overlay"></div>
+                            <div class="position-absolute bottom-0 start-0 p-3 text-container">
+                                <h5 class="mb-0 text-white bg-danger d-inline-block">Vem Mais Temporadas?</h5>
+                                <p class="mb-0 text-black bg-white d-inline-block">Filho do gaustão relata e expõe como ficou sua saude depois de varias cirurgias </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                    <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                    <img src="./img/card-banner/Ultimas-Noticias/2.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                        <img src="./img/card-banner/Ultimas-Noticias/1.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                        <img src="./img/card-banner/Ultimas-Noticias/1.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm text-center border-white">
-                    <div class="card-header text-center">
-                        <div class="float-center">
-                            titulo
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                        <img src="./img/card-banner/Ultimas-Noticias/1.jpg" class="img-fluid w-100 h-auto" alt="" />
-                        <a href="/events/" class="btn btn-danger">Saber mais</a>
-                    </div>
-                </div>
-            </div>
-           
-
         </div>
-
-
     </div>
 
 </body>
